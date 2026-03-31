@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Shifrin Group</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAEIElEQVR4nLWWa2xURRTHz9y5z312+8AWNjUttWDdkhYRWETty8QIUfwowRg/SKgYa4j1RVsLrdZHAxFR+sEHhESN9VFjTJEGaFraKLRRoZgIVSPGECpNu4/bvffunTl+qJpId7fdrc63OZmc3535n/+5hyzbUA7/5xLSOErIdZHr94sBIOKMafwrAmDjIgAECPn7kxFRpLRseclshADYHHwqqcwXLYZzLrYwAOOMcf5XRkLMeLy9YdeKoqKYYRBBIAAM4Qb3/A+Q+ATn3KFpmqIwxgghlNJQJHJ6dOS+6roZwxAIoQLoFgKCQgmmfKgEAEppWNebduw82NQa1nWBEM65y+H44tTJW28J5Pp8cdsmBCwGCKBKhKcLQI6aohzp+fTu2zc+vOWBydA0FaimqmPjFyenp2vWBSO6TgXB5mgxcEqEYapySgDgyJ2a9vX33za/vr/z6eeL/YUzRowKAiL2DvZvrqqe1QYRjDg6ZcJ5KkJiDWzG8rJz3vrg6MjY+Tdb9piWyTn3OF19w0P+/IKSwhsN0ySEROPolknK/Cl9oMjKzr0vrAmU1z+47drUlEPVfr969cL4pc1V1WFdF6kQtdApz+O2pADOuUPVfv7tcuOrHe1P7AqUlob1qENTPz/RV7MuqMoKAdQtVEWSoQ8AwGZ2js93uOeTvuHTXa3tNrOdmuObc99RKqwJlMeMmZgNEgVJSFWp8zgFOXc5HA0dbcX+wqceeXQqHDJMa+Ds2ftr6kzTtBghBBQxVaXOA+CIqqxc+WOi4aU9z23fcVtgFUf+5UB/xc1l+bm5uhlnHDQJMgcAgM1Yjjer+6ve7mO9Xa1tbqfrh/GLE5OTteuD0xHdRsEpEYaYTIgFdVPGucflbux8Ocvtaa5/PBoKHR8a3HRXFUcei6NLIRyT9u4FARBRlqTpcLh+b8tjW7fdU1P38fFj/vyCFUXF1yKGWxYwuRUW+j9gjPk8nt6B/ne6P3r3xVcienT0wtiWmtorU1GXStN2cmIG5z6Pt+nAvrgd3/fM7iM9n9UFg1xQJAEpIclkTgOAiKIoGqaxvWV3/daHluTkhMKhysBqIzajiEmtkAYAABhjXrdnYOTMG0cPv9b47NilH6s33GlalibT/wYAAMy2s71ZbYcOxgyjdn3QX7AsL3eJBHaylpc2AAGoIDDGnuxoL1tesnZVZfnKcsIMJEJCQtoAAGCcu12uM+fPdb739tJ8/x1rN7qVpGWUCQAAbNvO9nq7Pnz/5NCp1RVBr0PTTTZ3cMocAACEEEBoPrB/dOTEplJ5ZR417QQNI3MA51zTtF8u/zTce6hiqXLvTUrCGUnMGAAAgMiBjkxIoswGf7VEAebWKln88GsxoAQ4gkwTABZ3AwAAUERABJFAQq9lrsE/azZvMif/CSwS2Q1Tzrr1AAAAAElFTkSuQmCC">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Tenor+Sans&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --forest-deep:   #142E23;
+      --forest:        #1B3A2D;
+      --forest-accent: #2D6B4A;
+      --parchment:     #F5F3EE;
+      --cream:         #F0EDE5;
+      --cream-muted:   #BDC9C2;
+      --gold:          #A8823A;
+      --ink:           #1A1A18;
+      --ink-muted:     #5C5C55;
+      --ff-serif: 'EB Garamond', Georgia, serif;
+      --ff-sans:  'Tenor Sans', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background: var(--forest-deep);
+      color: var(--cream);
+      font-family: var(--ff-sans);
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Nav */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 64px;
+      height: 68px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      flex-shrink: 0;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav-logo svg {
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .nav-logo span {
+      font-family: var(--ff-serif);
+      font-size: 17px;
+      letter-spacing: 0.06em;
+      color: var(--cream);
+    }
+
+    /* Main content */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 64px 24px;
+      text-align: center;
+    }
+
+    .rule {
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 28px;
+    }
+
+    .error-code {
+      font-family: var(--ff-serif);
+      font-size: clamp(80px, 15vw, 140px);
+      font-weight: 400;
+      line-height: 1;
+      color: rgba(240,237,229,0.08);
+      letter-spacing: -0.02em;
+      margin-bottom: -20px;
+      user-select: none;
+    }
+
+    h1 {
+      font-family: var(--ff-serif);
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--cream-muted);
+      max-width: 400px;
+      margin-bottom: 48px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--ff-sans);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cream);
+      text-decoration: none;
+      border: 1px solid rgba(240,237,229,0.28);
+      padding: 13px 28px;
+      transition: border-color 0.25s, background 0.25s, color 0.25s;
+    }
+    .btn:hover {
+      border-color: var(--gold);
+      background: rgba(168,130,58,0.1);
+      color: var(--gold);
+    }
+
+    /* Footer */
+    footer {
+      padding: 24px 64px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .footer-copy {
+      font-size: 10px;
+      letter-spacing: 0.07em;
+      color: rgba(189,201,194,0.4);
+    }
+
+    @media (max-width: 640px) {
+      nav, footer { padding-left: 24px; padding-right: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">
+      <svg width="22" height="32" viewBox="0 0 58 84" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="4"  y1="9"  x2="50" y2="76" stroke="#F0EDE5" stroke-width="5"   stroke-linecap="round"/>
+        <line x1="22" y1="2"  x2="50" y2="76" stroke="#F0EDE5" stroke-width="3"   stroke-linecap="round"/>
+        <line x1="40" y1="0"  x2="50" y2="76" stroke="#A8823A" stroke-width="2"   stroke-linecap="round"/>
+        <circle cx="50" cy="76" r="5" fill="#A8823A"/>
+      </svg>
+      <span>Shifrin Group</span>
+    </a>
+  </nav>
+
+  <main>
+    <div class="error-code">404</div>
+    <div class="rule"></div>
+    <h1>Page Not Found</h1>
+    <p>The page you are looking for does not exist or may have been moved. Return to the homepage to continue.</p>
+    <a href="/" class="btn">
+      Return Home
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </main>
+
+  <footer>
+    <span class="footer-copy">© 2026 Shifrin Group. All rights reserved.</span>
+    <span class="footer-copy">Toronto, Canada</span>
+  </footer>
+
+</body>
+</html>
