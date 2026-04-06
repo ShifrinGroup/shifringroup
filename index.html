@@ -443,13 +443,15 @@
 
     function updateNav() {
       if (window.scrollY > 40) {
-        nav.style.background = 'rgba(27,58,45,0.97)';
-        nav.style.borderColor = 'rgba(255,255,255,0.08)';
-        nav.style.backdropFilter = 'blur(6px)';
+        nav.style.background = 'rgba(20,46,35,0.72)';
+        nav.style.borderBottom = '1px solid rgba(168,130,58,0.25)';
+        nav.style.backdropFilter = 'blur(16px) saturate(1.4)';
+        nav.style.webkitBackdropFilter = 'blur(16px) saturate(1.4)';
       } else {
         nav.style.background = 'transparent';
-        nav.style.borderColor = 'transparent';
+        nav.style.borderBottom = '1px solid transparent';
         nav.style.backdropFilter = 'none';
+        nav.style.webkitBackdropFilter = 'none';
       }
     }
     window.addEventListener('scroll', updateNav, { passive: true });
