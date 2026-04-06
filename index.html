@@ -74,26 +74,26 @@
     /* NAV */
     #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 300; height: 68px; display: flex; align-items: center; justify-content: space-between; padding: 0 64px; border-bottom: 1px solid transparent; transition: background 0.35s, border-color 0.35s; }
     #nav.over-dark { background: transparent; }
-    #nav.over-dark.scrolled { background: rgba(20,46,35,0.97); border-color: rgba(255,255,255,0.08); backdrop-filter: blur(6px); }
+    #nav.scrolled { background: rgba(27,58,45,0.97); border-color: rgba(255,255,255,0.08); backdrop-filter: blur(6px); }
     #nav.over-light { background: transparent; }
-    #nav.over-light.scrolled { background: rgba(27,58,45,0.97); border-color: rgba(255,255,255,0.08); backdrop-filter: blur(6px); }
+    /* nav always forest green when scrolled — see #nav.scrolled above */
     .nav-logo { font-family: var(--ff-serif); font-size: 17px; letter-spacing: 0.06em; text-decoration: none; transition: color 0.3s; position: relative; z-index: 2; }
     #nav.over-dark .nav-logo { color: var(--cream); }
     #nav.over-light .nav-logo { color: var(--ink); }
-#nav.over-light.scrolled .nav-logo { color: var(--cream); }
+    #nav.scrolled .nav-logo { color: var(--cream); }
     .nav-links { display: flex; gap: 48px; list-style: none; }
     .nav-links a { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; transition: color 0.2s; }
     #nav.over-dark .nav-links a { color: var(--cream-muted); }
     #nav.over-dark .nav-links a:hover { color: var(--cream); }
     #nav.over-light .nav-links a { color: var(--ink-muted); }
-#nav.over-light.scrolled .nav-links a { color: var(--cream-muted); }
+    #nav.scrolled .nav-links a { color: var(--cream-muted); }
     #nav.over-light .nav-links a:hover { color: var(--ink); }
-#nav.over-light.scrolled .nav-links a:hover { color: var(--cream); }
+    #nav.scrolled .nav-links a:hover { color: var(--cream); }
     .nav-hamburger { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; width: 40px; height: 40px; background: none; border: none; cursor: pointer; position: relative; z-index: 2; padding: 0; }
     .nav-hamburger span { display: block; width: 22px; height: 1px; transition: transform 0.3s, opacity 0.3s, background 0.3s; }
     #nav.over-dark .nav-hamburger span { background: var(--cream); }
     #nav.over-light .nav-hamburger span { background: var(--ink); }
-#nav.over-light.scrolled .nav-hamburger span { background: var(--cream); }
+    #nav.scrolled .nav-hamburger span { background: var(--cream); }
     .nav-hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
     .nav-hamburger.open span:nth-child(2) { opacity: 0; }
     .nav-hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
@@ -438,16 +438,9 @@
     </div>
   </footer><script>
     const nav = document.getElementById('nav');
-    const allSects = [...document.querySelectorAll('section[id], div[id]')];
-    const lightIds = new Set(['approach','about','contact']);
     function updateNav() {
       const y = window.scrollY;
       nav.classList.toggle('scrolled', y > 40);
-      let current = 'home';
-      allSects.forEach(s => { if (y >= s.offsetTop - 80) current = s.id; });
-      const light = lightIds.has(current);
-      nav.classList.toggle('over-light', light);
-      nav.classList.toggle('over-dark', !light);
     }
     window.addEventListener('scroll', updateNav, { passive: true });
     updateNav();
