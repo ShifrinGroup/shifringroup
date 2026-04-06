@@ -68,32 +68,34 @@
       --ff-serif: 'EB Garamond', Georgia, serif;
       --ff-sans:  'Tenor Sans', sans-serif;
     }
+    
+    #nav { color: var(--cream); }
+    #nav .nav-logo { color: var(--cream); }
+    #nav .nav-links a { color: var(--cream-muted); }
+    #nav .nav-links a:hover { color: var(--cream); }
+    #nav .nav-hamburger span { background: var(--cream); }
     html { scroll-behavior: smooth; font-size: 16px; }
     body { background: var(--parchment); color: var(--ink); font-family: var(--ff-sans); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 
     /* NAV */
     #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 300; height: 68px; display: flex; align-items: center; justify-content: space-between; padding: 0 64px; border-bottom: 1px solid transparent; transition: background 0.35s, border-color 0.35s; }
-    #nav.over-dark { background: transparent; }
-    #nav.scrolled { background: rgba(27,58,45,0.97); border-color: rgba(255,255,255,0.08); backdrop-filter: blur(6px); }
-    #nav.over-light { background: transparent; }
-    /* nav always forest green when scrolled — see #nav.scrolled above */
+    
+    
+    
+    
     .nav-logo { font-family: var(--ff-serif); font-size: 17px; letter-spacing: 0.06em; text-decoration: none; transition: color 0.3s; position: relative; z-index: 2; }
-    #nav.over-dark .nav-logo { color: var(--cream); }
-    #nav.over-light .nav-logo { color: var(--ink); }
-    #nav.scrolled .nav-logo { color: var(--cream); }
+    
+    
     .nav-links { display: flex; gap: 48px; list-style: none; }
     .nav-links a { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; transition: color 0.2s; }
-    #nav.over-dark .nav-links a { color: var(--cream-muted); }
-    #nav.over-dark .nav-links a:hover { color: var(--cream); }
-    #nav.over-light .nav-links a { color: var(--ink-muted); }
-    #nav.scrolled .nav-links a { color: var(--cream-muted); }
-    #nav.over-light .nav-links a:hover { color: var(--ink); }
-    #nav.scrolled .nav-links a:hover { color: var(--cream); }
+    
+    
+    
+    
     .nav-hamburger { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; width: 40px; height: 40px; background: none; border: none; cursor: pointer; position: relative; z-index: 2; padding: 0; }
     .nav-hamburger span { display: block; width: 22px; height: 1px; transition: transform 0.3s, opacity 0.3s, background 0.3s; }
-    #nav.over-dark .nav-hamburger span { background: var(--cream); }
-    #nav.over-light .nav-hamburger span { background: var(--ink); }
-    #nav.scrolled .nav-hamburger span { background: var(--cream); }
+    
+    
     .nav-hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
     .nav-hamburger.open span:nth-child(2) { opacity: 0; }
     .nav-hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
@@ -256,7 +258,7 @@
 </head>
 <body>
 
-  <nav id="nav" class="over-dark">
+  <nav id="nav">
     <a href="#home" class="nav-logo" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
       <svg width="22" height="32" viewBox="0 0 54 84" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <line x1="4"  y1="9"  x2="50" y2="76" stroke="currentColor" stroke-width="5"   stroke-linecap="round"/>
@@ -438,9 +440,17 @@
     </div>
   </footer><script>
     const nav = document.getElementById('nav');
+
     function updateNav() {
-      const y = window.scrollY;
-      nav.classList.toggle('scrolled', y > 40);
+      if (window.scrollY > 40) {
+        nav.style.background = 'rgba(27,58,45,0.97)';
+        nav.style.borderColor = 'rgba(255,255,255,0.08)';
+        nav.style.backdropFilter = 'blur(6px)';
+      } else {
+        nav.style.background = 'transparent';
+        nav.style.borderColor = 'transparent';
+        nav.style.backdropFilter = 'none';
+      }
     }
     window.addEventListener('scroll', updateNav, { passive: true });
     updateNav();
@@ -449,3 +459,13 @@
     function openDrawer() { drawer.classList.add('open'); hamburger.classList.add('open'); hamburger.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
     function closeDrawer() { drawer.classList.remove('open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
     hamburger.addEventListener('click', () => drawer.classList.contains('open') ? closeDrawer() : openDrawer());
+    drawer.querySelectorAll('a').forEach(l => l.addEventListener('click', closeDrawer));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+    const revObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); } });
+    }, { threshold: 0.07, rootMargin: '0px 0px -32px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+  </script>
+</body>
+</html>
