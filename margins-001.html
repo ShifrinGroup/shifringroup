@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brutal Math of Running a Barbershop | Shifrin Group Margins</title>
+<meta name="description" content="Why a barbershop that is full every Saturday can still lose money: chair-hour economics, utilization by day, commission versus chair rental, and what a service business is actually worth to its owner or a buyer. Issue 001 of Shifrin Group Margins, from a Toronto operating, investment and advisory group.">
+<meta name="keywords" content="barbershop business model, barbershop profit margin, why is my barbershop not making money, chair rental vs commission split, salon utilization benchmark, how to value a barbershop, buying a service business, small business valuation Canada, service business advisory Toronto, operational consulting barbershop salon, Shifrin Group, Shifrin Group Margins">
+<meta name="author" content="Shifrin Group">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://shifringroup.com/margins-001.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Shifrin Group">
+<meta property="og:locale" content="en_CA">
+<meta property="og:title" content="The Brutal Math of Running a Barbershop | Shifrin Group Margins">
+<meta property="og:description" content="Why a shop that is full every Saturday can still lose money. Chair-hour economics, utilization, commission versus chair rental, and what the business is actually worth.">
+<meta property="og:url" content="https://shifringroup.com/margins-001.html">
+<meta property="og:image" content="https://shifringroup.com/images/margins-001-hero.jpg">
+<meta property="article:published_time" content="2026-07-16">
+<meta property="article:author" content="Shifrin Group">
+<meta property="article:section" content="Business Economics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Brutal Math of Running a Barbershop | Shifrin Group Margins">
+<meta name="twitter:description" content="Why a shop that is full every Saturday can still lose money. Chair-hour economics, utilization, and what the business is actually worth.">
+<meta name="twitter:image" content="https://shifringroup.com/images/margins-001-hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Tenor+Sans&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest-deep:#1B3A2D;
+    --forest-deeper:#142E23;
+    --forest-accent:#2D6B4A;
+    --parchment:#F5F3EE;
+    --parchment-warm:#EBE8E1;
+    --cream:#F0EDE5;
+    --cream-muted:#BDC9C2;
+    --gold:#A8823A;
+    --ink:#1A1A18;
+    --ink-soft:#3D3D38;
+    --ink-muted:#5C5C55;
+    --ink-tertiary:#7A7A72;
+    --rule:#D6D2CB;
+    --rule-light:#E6E3DC;
+    --ff-serif:'EB Garamond', Georgia, 'Times New Roman', serif;
+    --ff-sans:'Tenor Sans', 'Helvetica Neue', Arial, sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--parchment);color:var(--ink-soft);font-family:var(--ff-serif);font-size:19px;line-height:1.75;-webkit-font-smoothing:antialiased;}
+
+  /* nav */
+  .nav{border-bottom:1px solid var(--rule);background:var(--parchment);}
+  .nav-inner{max-width:1080px;margin:0 auto;height:68px;padding:0 24px;display:flex;justify-content:space-between;align-items:center;}
+  .nav a.word{font-family:var(--ff-serif);font-size:17px;letter-spacing:0.06em;color:var(--ink);text-decoration:none;}
+  .nav a.back{font-family:var(--ff-sans);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-muted);text-decoration:none;}
+  .nav a.back:hover{color:var(--forest-deep);}
+
+  /* article shell */
+  article{max-width:700px;margin:0 auto;padding:64px 24px 80px;}
+  .eyebrow{font-family:var(--ff-sans);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  h1{font-family:var(--ff-serif);font-weight:500;font-size:44px;line-height:1.15;color:var(--ink);margin-bottom:14px;}
+  h1 em{font-style:italic;font-weight:400;}
+  .byline{font-family:var(--ff-sans);font-size:13px;letter-spacing:1px;color:var(--ink-tertiary);margin-bottom:40px;}
+  h2{font-family:var(--ff-serif);font-weight:500;font-size:28px;line-height:1.25;color:var(--ink);margin:52px 0 18px;}
+  h2::before{content:"";display:block;width:36px;height:2px;background:var(--gold);margin-bottom:14px;}
+  p{margin-bottom:22px;}
+  strong{color:var(--ink);font-weight:500;}
+  sup{font-family:var(--ff-sans);font-size:11px;}
+  sup a{color:var(--gold);text-decoration:none;}
+  sup a:hover{color:var(--forest-accent);}
+
+  .equation{font-family:var(--ff-sans);font-size:15px;letter-spacing:1px;text-align:center;background:var(--parchment-warm);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:22px 16px;margin:28px 0;color:var(--ink);}
+
+  figure{margin:34px 0;}
+  figure img{width:100%;height:auto;display:block;}
+  figure svg{width:100%;height:auto;display:block;border:1px solid var(--rule-light);}
+  figcaption{font-family:var(--ff-sans);font-size:11.5px;letter-spacing:.5px;color:var(--ink-tertiary);margin-top:8px;}
+  figcaption a{color:var(--ink-tertiary);}
+  figcaption a:hover{color:var(--forest-deep);}
+
+  /* sources */
+  .sources{margin-top:56px;border-top:1px solid var(--rule);padding-top:28px;}
+  .sources h3{font-family:var(--ff-sans);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:400;}
+  .sources ol{margin-left:20px;}
+  .sources li{font-family:var(--ff-sans);font-size:13px;line-height:1.7;color:var(--ink-muted);margin-bottom:8px;}
+  .sources a{color:var(--forest-accent);text-decoration:none;}
+  .sources a:hover{text-decoration:underline;}
+
+  /* series footer */
+  .colophon{background:var(--forest-deep);color:var(--cream);margin-top:72px;}
+  .colophon-inner{max-width:700px;margin:0 auto;padding:44px 24px;}
+  .colophon .mast{font-family:var(--ff-sans);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+  .colophon p{font-family:var(--ff-serif);font-size:16px;line-height:1.7;color:var(--cream);margin-bottom:14px;}
+  .colophon p.fine{font-family:var(--ff-sans);font-size:12px;line-height:1.7;color:var(--cream-muted);margin-bottom:0;}
+  .sitefoot{background:var(--forest-deeper);}
+  .sitefoot-inner{max-width:1080px;margin:0 auto;padding:20px 24px;font-family:var(--ff-sans);font-size:12px;letter-spacing:1px;color:var(--cream-muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  .sitefoot a{color:var(--cream);text-decoration:none;}
+
+  @media (max-width:560px){
+    body{font-size:17.5px;}
+    h1{font-size:34px;}
+    h2{font-size:24px;}
+    article{padding-top:44px;}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://shifringroup.com/margins-001.html#article",
+      "mainEntityOfPage": "https://shifringroup.com/margins-001.html",
+      "headline": "The Brutal Math of Running a Barbershop",
+      "description": "Why a barbershop that is full every Saturday can still lose money: chair-hour economics, utilization by day, commission versus chair rental, and what a service business is actually worth to its owner or a buyer.",
+      "image": "https://shifringroup.com/images/margins-001-hero.jpg",
+      "datePublished": "2026-07-16",
+      "inLanguage": "en-CA",
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "name": "Shifrin Group Margins",
+        "description": "A series on the economics of everyday businesses: what they earn, what they keep, and how to grow both."
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Shifrin Group",
+        "url": "https://shifringroup.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shifrin Group",
+        "url": "https://shifringroup.com",
+        "email": "info@shifringroup.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Toronto",
+          "addressRegion": "ON",
+          "addressCountry": "CA"
+        }
+      },
+      "about": [
+        {"@type": "Thing", "name": "Barbershop economics"},
+        {"@type": "Thing", "name": "Service business valuation"},
+        {"@type": "Thing", "name": "Small business operations"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://shifringroup.com/margins-001.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why can a barbershop that is always busy still lose money?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because the shop is usually only busy at peak times. A shop can run near 90 percent utilization on Friday and Saturday while Tuesday runs at 30 percent, pulling the weekly average toward 55 to 60 percent, and rent is charged on every open hour. Revenue is capped by chairs, hours, and utilization, while fixed costs are not capped at all. An empty chair-hour is inventory that expires the moment it passes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a barbershop owner actually make?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In an illustrative four-chair Toronto shop at a $40 average ticket and 60 percent utilization, the commission model leaves the owner roughly $70,000 a year when fully staffed, before pricing the owner's own labour. One chair sitting empty for six months cuts that by nearly a third. Under a chair rental model at market rates, the same shop can lose money before the owner earns a dollar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How should a buyer value a barbershop or similar service business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start by charging the business a market wage for every hour the owner works in it. What remains is the actual enterprise a buyer would be acquiring. In many owner-operated shops that residual is close to zero, because the cash flow was the founder's hands, and the hands leave at closing. This is analysis, not investment advice; every business requires its own diligence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is commission or chair rental the better model for a barbershop?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They are different businesses. Commission (typically 50 to 60 percent to the barber) gives the owner upside on productive staff but full exposure to empty chairs and fixed costs. Chair rental converts the owner into a landlord with predictable revenue, but at typical market rents a small shop's rental income may not cover its cost base. The right answer depends on rent, chair count, and the owner's own role in the shop."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can a barbershop or salon increase profit without more customers on Saturday?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Four levers: raise price, which flows through at nearly full margin; shift demand into off-peak days through targeted rates and memberships; convert clients into members with recurring plans, which stabilizes revenue and spreads work across idle chairs; and treat the space like real estate, spreading fixed rent across more sellable hours and chairs."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="word" href="https://shifringroup.com">Shifrin Group</a>
+    <a class="back" href="https://shifringroup.com">&#8592; shifringroup.com</a>
+  </div>
+</nav>
+
+<article>
+  <div class="eyebrow">Shifrin Group Margins &mdash; Issue 001</div>
+  <h1>The Brutal Math of Running a <em>Barbershop</em></h1>
+  <div class="byline">Shifrin Group &middot; Toronto</div>
+
+  <figure>
+    <img src="images/margins-001-hero.jpg" alt="A row of empty barber chairs in a quiet shop">
+    <figcaption>Photo: <a href="https://unsplash.com/@onatecan">Nathon Oski</a> on <a href="https://unsplash.com/photos/black-leather-barber-chair-near-brown-brick-wall-EW_rqoSdDes">Unsplash</a></figcaption>
+  </figure>
+
+  <p>There is a barbershop near you that is full every Saturday, carries a three-day wait for its best barber, charges $40 a cut, and loses money. The losses are modest in any given month, which is precisely why the owner has difficulty seeing them: the room is loud, the chairs are busy, and by all visible metrics the place is thriving.</p>
+
+  <p>The mechanics behind that outcome are worth understanding, and they extend well beyond barbershops. The same structure governs any business that sells time in a chair: salons, tattoo studios, physiotherapy clinics, dental practices. Once the underlying math is visible, it becomes difficult to look at any of these businesses the same way.</p>
+
+  <h2>The product is haircuts, the profit is chair-hours</h2>
+
+  <p>The client buys a haircut. The shop's economics, however, run on occupancy of a chair, sold in 30 to 45 minute blocks during a fixed window of opening hours. That makes it an inventory business with the least forgiving inventory in commerce. A retailer's unsold sweater can be sold tomorrow. Even a banana gets a week on the counter before it spoils. A chair-hour that passes empty at 2:15 on a Tuesday is destroyed at 2:16. It cannot be discounted later, stored, or bundled into a future sale.</p>
+
+  <p>The entire business therefore reduces to a single equation:</p>
+
+  <div class="equation">Revenue&nbsp;&nbsp;=&nbsp;&nbsp;chairs&nbsp;&times;&nbsp;hours available&nbsp;&times;&nbsp;utilization&nbsp;&times;&nbsp;price per hour</div>
+
+  <p>Chairs are fixed by the lease. Hours are fixed by how long a barber can stand. That leaves two levers, utilization and price, and the two are far from equal.</p>
+
+  <h2>The capacity ceiling in real numbers</h2>
+
+  <p>Consider a model shop: four chairs, 900 square feet, a decent Toronto neighbourhood, $5,500 a month in gross rent, and an average ticket of $40, the going rate for a standard cut at a quality Toronto shop.<sup><a href="#src1">1, 2</a></sup> A cut takes roughly 40 minutes including turnover, so a chair can theoretically produce about 12 cuts in an eight-hour day.</p>
+
+  <p>That theoretical capacity is difficult to reach in practice. A 1:00 booking arrives at 1:10. A 3:30 no-show takes a full block with it. Lunch breaks, the 20-minute gaps between bookings that fit no service, and slow midweek days all take their share. Benchmark data across salons and barbershops puts the median shop just under 50 percent utilization, with the industry average around two-thirds and only top performers approaching 80.<sup><a href="#src3">3, 4</a></sup> Set our model shop at 60 percent, which works out to seven to eight cuts per chair per day.</p>
+
+  <p>Eight cuts at $40, six days a week, 50 weeks a year, grosses approximately $96,000 per fully staffed chair. Four chairs put the shop's ceiling near $384,000. The word ceiling is precise here, because this is where the business departs from almost every other model: <strong>the ceiling cannot be raised through effort.</strong> A software company can sell an additional license at midnight. A barbershop seeking 20 percent more revenue requires 20 percent more chair-hours or 20 percent higher prices. There is no third option, and the room already holds as many chairs as it can.</p>
+
+  <h2>Why the full shop loses money</h2>
+
+  <p>The trap sits inside the word "full." When an owner describes the shop as full, they mean Friday and Saturday, the days with the lineup on the bench and the wait list on the board. Those days may run at 90 percent utilization. Tuesday runs at 30. Wednesday at 35. The weekly average is pulled down to that 55 to 60 percent range by afternoons nobody remembers, because nothing happened during them.</p>
+
+  <figure>
+    <svg viewBox="0 0 760 490" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart of chair utilization by day, with Tuesday drawn hollow and a dashed gold line at the 60 percent weekly average">
+      <rect x="0" y="0" width="760" height="490" fill="#F5F3EE"/>
+      <text x="40" y="30" font-family="'Tenor Sans', 'Helvetica Neue', Arial, sans-serif" font-size="11" letter-spacing="2.5" fill="#A8823A">SHIFRIN GROUP MARGINS &#8212; FIGURE 2</text>
+      <text x="40" y="60" font-family="'EB Garamond', Georgia, serif" font-size="24" fill="#1A1A18">The week in utilization</text>
+      <text x="40" y="80" font-family="'Tenor Sans', 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5C5C55">Chair utilization by day of week, model shop</text>
+      <line x1="80" y1="380" x2="700" y2="380" stroke="#1A1A18" stroke-width="1.2"/>
+      <line x1="80" y1="312.5" x2="700" y2="312.5" stroke="#E6E3DC" stroke-width="1"/>
+      <line x1="80" y1="245" x2="700" y2="245" stroke="#E6E3DC" stroke-width="1"/>
+      <line x1="80" y1="177.5" x2="700" y2="177.5" stroke="#E6E3DC" stroke-width="1"/>
+      <line x1="80" y1="110" x2="700" y2="110" stroke="#D6D2CB" stroke-width="1" stroke-dasharray="2 3"/>
+      <text x="72" y="384" font-family="'Tenor Sans', Arial, sans-serif" font-size="11" fill="#5C5C55" text-anchor="end">0</text>
+      <text x="72" y="316" font-family="'Tenor Sans', Arial, sans-serif" font-size="11" fill="#5C5C55" text-anchor="end">25</text>
+      <text x="72" y="249" font-family="'Tenor Sans', Arial, sans-serif" font-size="11" fill="#5C5C55" text-anchor="end">50</text>
+      <text x="72" y="181" font-family="'Tenor Sans', Arial, sans-serif" font-size="11" fill="#5C5C55" text-anchor="end">75</text>
+      <text x="72" y="114" font-family="'Tenor Sans', Arial, sans-serif" font-size="11" fill="#5C5C55" text-anchor="end">100</text>
+      <text x="700" y="102" font-family="'Tenor Sans', Arial, sans-serif" font-size="11" fill="#7A7A72" text-anchor="end">theoretical capacity</text>
+      <rect x="110" y="258.5" width="60" height="121.5" fill="#2D6B4A"/>
+      <text x="140" y="248" font-family="'Tenor Sans', Arial, sans-serif" font-size="13" fill="#1A1A18" text-anchor="middle">45%</text>
+      <text x="140" y="402" font-family="'Tenor Sans', Arial, sans-serif" font-size="13" fill="#5C5C55" text-anchor="middle">Mon</text>
+      <rect x="208" y="299" width="60" height="81" fill="none" stroke="#5C5C55" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <text x="238" y="288" font-family="'Tenor Sans', Arial, sans-serif" font-size="13" fill="#1A1A18" text-anchor="middle">30%</text>
+      <text x="238" y="402" font-family="'Tenor Sans', Arial, sans-serif" font-size="13" font-weight="600" fill="#1A1A18" text-anchor="middle">Tue</text>
+      <rect x="306" y="285.5" width="60" height="94.5" fill="#2D6B4A"/>
+      <text x="336" y="275" font-family="'Tenor Sans', Arial, sans-serif" font-size="13" fill="#1A1A18" text-anchor="middle">35%</text>
+      <text x="336" y="402" font-family="'Tenor Sans', Arial, sans-serif" font-size="13" fill="#5C5C55" text-anchor="middle">Wed</text>
+      <rect x="404" y="231.5" width="60" height="148.5" fill="#2D6B4A"/>
+      <text x="434" y="221" font-family="'Tenor Sans', Arial, sans-serif" font-size="13" fill="#1A1A18" text-anchor="middle">55%</text>
+      <text x="434" y="402" font-family="'Tenor Sans', Arial, sans-serif" font-size="13" fill="#5C5C55" text-anchor="middle">Thu</text>
+      <rect x="502" y="150.5" width="60" height="229.5" fill="#1B3A2D"/>
+      <text x="532" y="140" font-family="'Tenor Sans', Arial, sans-serif" font-size="13" fill="#1A1A18" text-anchor="middle">85%</text>
+      <text x="532" y="402" font-family="'Tenor Sans', Arial, sans-serif" font-size="13" fill="#5C5C55" text-anchor="middle">Fri</text>
+      <rect x="600" y="137" width="60" height="243" fill="#1B3A2D"/>
+      <text x="630" y="127" font-family="'Tenor Sans', Arial, sans-serif" font-size="13" fill="#1A1A18" text-anchor="middle">90%</text>
+      <text x="630" y="402" font-family="'Tenor Sans', Arial, sans-serif" font-size="13" fill="#5C5C55" text-anchor="middle">Sat</text>
+      <line x1="90" y1="218" x2="700" y2="218" stroke="#A8823A" stroke-width="1.5" stroke-dasharray="6 4"/>
+      <text x="96" y="210" font-family="'Tenor Sans', Arial, sans-serif" font-size="12" fill="#A8823A">weekly average &#8776; 60%</text>
+      <text x="40" y="446" font-family="'Tenor Sans', Arial, sans-serif" font-size="12" fill="#5C5C55">Rent is charged on all six days. Saturday pays for Saturday; nothing pays for Tuesday.</text>
+      <text x="40" y="464" font-family="'Tenor Sans', Arial, sans-serif" font-size="12" fill="#5C5C55">The hollow bar is the inventory that expired unsold.</text>
+    </svg>
+  </figure>
+
+  <p>The same phenomenon governs hotels, restaurants, and gyms: peak demand fills the room and shapes the owner's self-perception, while off-peak emptiness shapes the income statement. A more accurate description is that the shop is full roughly 30 percent of the time and open 100 percent of the time, and rent is charged against the second number. The landlord does not offer a Tuesday discount.</p>
+
+  <p>Set the costs against the $384,000 ceiling. Rent is $66,000. Utilities, insurance, supplies, laundry, software, and card fees total perhaps $35,000 on a lean operation. The largest line, the barbers themselves, depends on which of two business models the shop is actually running.</p>
+
+  <h2>The two business models hiding inside one shop</h2>
+
+  <p>Every barbershop operates one of two models, and they produce fundamentally different businesses.</p>
+
+  <p><strong>The commission model.</strong> Barbers are staff, with a split typically running 50 to 60 percent to the barber.<sup><a href="#src5">5, 6</a></sup> At a 55 percent payout on $384,000, the shop retains about $173,000, covers roughly $101,000 in operating costs, and leaves the owner approximately $70,000. That is the favourable scenario: four chairs fully staffed with productive barbers and disciplined cost control. The fragility appears the moment the shop's best barber leaves in March to open their own place two blocks away, and the chair sits unstaffed for six months, which is close to the industry's permanent condition, since skilled barbers are scarce and mobile. Revenue falls by roughly $48,000 over those months. The departed barber's commission goes unpaid, which offsets a little more than half of the loss, but rent, insurance, and the rest of the cost base fall by nothing. The owner's $70,000 year becomes roughly $50,000. A single empty chair consumed nearly 30 percent of the profit. This is the same fixed-cost leverage that makes small hotels fragile, playing out at the scale of a four-chair shop.</p>
+
+  <figure>
+    <svg viewBox="0 0 760 510" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The revenue cascade, from the $384,000 ceiling through barber pay, rent, and operating costs to the owner's $70,000">
+      <defs>
+        <marker id="arrowB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 1 L 8 5 L 0 9" fill="none" stroke="#1A1A18" stroke-width="1.5"/>
+        </marker>
+      </defs>
+      <rect x="0" y="0" width="760" height="510" fill="#F5F3EE"/>
+      <text x="40" y="30" font-family="'Tenor Sans', 'Helvetica Neue', Arial, sans-serif" font-size="11" letter-spacing="2.5" fill="#A8823A">SHIFRIN GROUP MARGINS &#8212; FIGURE 1</text>
+      <text x="40" y="60" font-family="'EB Garamond', Georgia, serif" font-size="24" fill="#1A1A18">Where the $384,000 goes</text>
+      <text x="40" y="80" font-family="'Tenor Sans', 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5C5C55">The commission model, four chairs fully staffed</text>
+      <rect x="210" y="104" width="340" height="62" fill="none" stroke="#1B3A2D" stroke-width="1.5"/>
+      <text x="380" y="128" font-family="'Tenor Sans', 'Helvetica Neue', Arial, sans-serif" font-size="11" letter-spacing="1.5" fill="#A8823A" text-anchor="middle">REVENUE CEILING</text>
+      <text x="380" y="155" font-family="'EB Garamond', Georgia, serif" font-size="28" font-weight="600" fill="#1A1A18" text-anchor="middle">$384,000</text>
+      <line x1="380" y1="166" x2="380" y2="194" stroke="#1A1A18" stroke-width="1.5" marker-end="url(#arrowB)"/>
+      <text x="225" y="222" font-family="'Tenor Sans', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#5C5C55">&#8722;  Barber pay, 55% commission</text>
+      <text x="535" y="222" font-family="'EB Garamond', Georgia, serif" font-size="17" font-weight="600" fill="#1A1A18" text-anchor="end">$211,000</text>
+      <line x1="210" y1="234" x2="550" y2="234" stroke="#D6D2CB" stroke-width="1"/>
+      <text x="225" y="266" font-family="'Tenor Sans', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#5C5C55">&#8722;  Rent</text>
+      <text x="535" y="266" font-family="'EB Garamond', Georgia, serif" font-size="17" font-weight="600" fill="#1A1A18" text-anchor="end">$66,000</text>
+      <line x1="210" y1="278" x2="550" y2="278" stroke="#D6D2CB" stroke-width="1"/>
+      <text x="225" y="310" font-family="'Tenor Sans', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#5C5C55">&#8722;  Operating costs</text>
+      <text x="535" y="310" font-family="'EB Garamond', Georgia, serif" font-size="17" font-weight="600" fill="#1A1A18" text-anchor="end">$35,000</text>
+      <line x1="210" y1="322" x2="550" y2="322" stroke="#1A1A18" stroke-width="1.2"/>
+      <line x1="380" y1="334" x2="380" y2="362" stroke="#1A1A18" stroke-width="1.5" marker-end="url(#arrowB)"/>
+      <rect x="210" y="372" width="340" height="62" fill="#1B3A2D"/>
+      <rect x="210" y="372" width="4" height="62" fill="#A8823A"/>
+      <text x="380" y="396" font-family="'Tenor Sans', 'Helvetica Neue', Arial, sans-serif" font-size="11" letter-spacing="1.5" fill="#BDC9C2" text-anchor="middle">THE OWNER'S YEAR</text>
+      <text x="380" y="423" font-family="'EB Garamond', Georgia, serif" font-size="28" font-weight="600" fill="#F0EDE5" text-anchor="middle">&#8776; $70,000</text>
+      <text x="40" y="478" font-family="'Tenor Sans', 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5C5C55">About 18 cents of each revenue dollar reaches the owner in the fully staffed year.</text>
+      <text x="40" y="496" font-family="'Tenor Sans', 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5C5C55">One chair sitting empty for six months cuts the owner's year by nearly a third.</text>
+    </svg>
+  </figure>
+
+  <p><strong>The chair rental model.</strong> The owner exits the haircut business entirely and rents chairs to independent barbers at, say, $300 per week, toward the upper half of the market range for urban shops.<sup><a href="#src7">7, 8</a></sup> Four chairs across 52 weeks generate $62,400 in revenue against the same $101,000 cost base. At market chair rents, a four-chair rental shop in a $5,500 rent location loses money before the owner earns a dollar. The rental model only functions with more chairs, materially cheaper rent, or the owner occupying one of the chairs themselves, which leads to the central observation of this piece.</p>
+
+  <figure>
+    <img src="images/margins-001-barber.jpg" alt="A barber at work behind the chair">
+    <figcaption>Photo: <a href="https://unsplash.com/@chrisknight">Chris Knight</a> on <a href="https://unsplash.com/photos/person-trimming-mans-hair-vI3m5UnZ0aQ">Unsplash</a></figcaption>
+  </figure>
+
+  <h2>Most barbershops are not businesses. They are jobs with a lease.</h2>
+
+  <p>In the majority of shops, the largest source of apparent profit is the owner working chair one, cutting hair 40 hours a week. Charge the business a market wage for those hours, plausibly $60,000 to $80,000 with tips, which is roughly what our own model pays its barbers once tips are added, and what is left over is what the shop would earn if the owner stepped away. In most shops that number is nothing. In some, it is less than nothing.</p>
+
+  <p>This is the test worth applying to any small business: <strong>what does the business earn after paying market rate for every hour the owner works in it?</strong> That residual is the actual business. Everything else is a salary the owner pays themselves through a cash register. It is also why so many barbershops sell for very little when a founder retires. The cash flow the buyer hopes to acquire was the founder's hands, and the hands are leaving.</p>
+
+  <h2>Where the margin comes from</h2>
+
+  <p>The category is not hopeless, but the margin lives in four places.</p>
+
+  <p><strong>Price.</strong> The strongest lever by a wide margin, because it flows through at nearly 100 percent. Moving from $40 to $46 is a 15 percent revenue increase with no added cost, and demand is stickier than it appears: clients rarely leave a barber they trust over $6. Yet price tends to be the last lever touched, because a price increase must be announced to people the owner knows by name, while Tuesday's losses announce themselves to no one.</p>
+
+  <p><strong>The Tuesday problem.</strong> Off-peak chair-hours are worthless in their current form, which makes them free raw material. Student rates, seniors' mornings, and membership structures that steer clients toward weekdays all serve the same function: they shift demand from the days that are already full to the days that are not, and the discount lands with the clients most sensitive to price. Every client moved frees a full-price Saturday slot and sells a chair-hour that would otherwise have expired off-peak.</p>
+
+  <p><strong>Members, not customers.</strong> A monthly membership, two cuts for $70 on automatic payment, converts the shop's revenue from bookings into something closer to rent: predictable, collected in advance, and indifferent to a rainy Saturday. It also increases visit frequency, which is a great way to grow demand without growing marketing spend. And the structure scales. Run as a pool rather than a booking with a specific barber, the membership lets anyone on the team without a scheduled client field the members, spreading work across idle chairs and weakening the shop's dependence on any single barber. Larger operations can layer tiers on top, charging more for the senior chairs, so the same plan serves a student on a budget and a client who will only see the most experienced barber in the shop.</p>
+
+  <p><strong>The real estate posture.</strong> The most sophisticated owners eventually recognize that they are in the business of subletting expensive space in 40-minute increments, and they begin operating accordingly: more chairs per square foot, extended hours that spread fixed rent across more sellable inventory, and chair rents priced from their actual cost per chair rather than from whatever the shop down the street charges.</p>
+
+  <p>There is a fifth lever, demand itself, and the marketing machinery that grows it is large enough to deserve its own issue.</p>
+
+  <h2>Beyond the barbershop</h2>
+
+  <p>Look back at the four levers and notice what they share. Price raises the value of an hour that was already going to be sold. The Tuesday discount finds a buyer for an hour that was going to be destroyed. The membership sells hours in advance and lets any idle chair deliver them. The real estate posture packs more chairs and more hours into the same lease. Every one of them raises revenue against a rent bill that stays exactly where it was, and in a business whose costs are fixed, that is how to win the game.</p>
+
+  <p>Barbershops are the example here rather than the subject. The same structure holds for salons, tattoo studios, clinics, gyms, restaurants, and even hotels: any operation in which revenue is capped by hours and chairs, costs are capped by nothing, and the owner's own labour obscures whether a real business exists underneath. Two questions cut through all of them. What does the operation earn after paying market rate for every hour the owner works in it? And how much of the week does "full" actually describe?</p>
+
+  <p>The next time you pass a packed shop on a Saturday, the question worth asking is what does their Tuesday look like.</p>
+
+  <div class="sources" id="sources">
+    <h3>Sources</h3>
+    <ol>
+      <li id="src1">Now Toronto, <a href="https://nowtoronto.com/lifestyle/torontonians-calling-out-rising-mens-haircut-prices-barbers-respondt/">"Torontonians calling out rising haircut prices for men, and barbers are responding"</a>, May 2025.</li>
+      <li id="src2">TorontoBlogs, <a href="https://torontoblogs.ca/best-barbershops-in-toronto/">"The 9 Best Barbershops in Toronto"</a>, 2025.</li>
+      <li id="src3">Zenoti, <a href="https://zenoti.com/thecheckin/salon-trends-2026">"Salon Trends 2026: 6 Revenue Growth Strategies"</a>, drawing on the 2026 Beauty and Wellness Benchmark Report.</li>
+      <li id="src4">Zenoti, <a href="https://www.zenoti.com/thecheckin/beauty-wellness-industry-statistics-2025">"Beauty &amp; Wellness Industry Statistics 2025"</a>.</li>
+      <li id="src5">Yocale, <a href="https://www.yocale.com/blog/barbershop-commission-agreement">"Barbershop Commission Agreement: What You Need to Know in 2025"</a>.</li>
+      <li id="src6">Zenoti, <a href="https://www.zenoti.com/thecheckin/salon-commission-structure">"Salon Commission Structures: The Complete Guide for Owners"</a>, 2026.</li>
+      <li id="src7">Salon Renter, <a href="https://salonrenter.com/barbershop-booth-rentals/">"Barbershop Booth Rentals"</a>, market listing data.</li>
+      <li id="src8">SQUIRE, <a href="https://getsquire.com/business-edge/how-much-does-a-barber-make">"How Much Does a Barber Make?"</a>.</li>
+    </ol>
+  </div>
+</article>
+
+<div class="colophon">
+  <div class="colophon-inner">
+    <div class="mast">Shifrin Group Margins</div>
+    <p>Shifrin Group Margins examines the economics of everyday businesses: what they earn, what they keep, and how to grow both. Shifrin Group engages these questions as operator, investor, and advisor. The math that runs a business well is the same math that values it correctly.</p>
+    <p class="fine">The model shop above is an illustrative construction, not the financials of any specific business; industry benchmarks are cited where available. This is analysis and opinion, not investment, legal, or financial advice.</p>
+  </div>
+</div>
+
+<footer class="sitefoot">
+  <div class="sitefoot-inner">
+    <span>&copy; 2026 Shifrin Group. All rights reserved. Toronto, Canada.</span>
+    <span><a href="mailto:info@shifringroup.com">info@shifringroup.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
