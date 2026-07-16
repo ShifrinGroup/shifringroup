@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.shifringroup.com/sitemap.xml
+Sitemap: https://shifringroup.com/sitemap.xml

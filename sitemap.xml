@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.shifringroup.com/</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://shifringroup.com/</loc>
+    <lastmod>2026-07-16</lastmod>
   </url>
   <url>
-    <loc>https://www.shifringroup.com/privacy-policy</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://shifringroup.com/margins.html</loc>
+    <lastmod>2026-07-16</lastmod>
   </url>
   <url>
-    <loc>https://www.shifringroup.com/margins</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://shifringroup.com/margins-001.html</loc>
+    <lastmod>2026-07-16</lastmod>
   </url>
   <url>
-    <loc>https://www.shifringroup.com/margins-001</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.5</priority>
+    <loc>https://shifringroup.com/privacy-policy.html</loc>
+    <lastmod>2026-07-16</lastmod>
   </url>
 </urlset>
