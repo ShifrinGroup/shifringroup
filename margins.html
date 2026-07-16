@@ -156,6 +156,7 @@
     <form id="marginsSubscribe" novalidate>
       <div class="fields">
         <input type="text" name="firstname" placeholder="First name" autocomplete="given-name">
+        <input type="text" name="lastname" placeholder="Last name" autocomplete="family-name">
         <input type="email" name="email" placeholder="Email address" autocomplete="email" required>
       </div>
       <label class="consent">
@@ -170,8 +171,9 @@
   <script>
   (function(){
     // Paste these two values from your HubSpot form embed code
-    var PORTAL_ID = "REPLACE_PORTAL_ID";
-    var FORM_GUID = "REPLACE_FORM_GUID";
+    var PORTAL_ID = "343450300";
+    var FORM_GUID = "5a2ed79f-4cf7-4fc9-a15a-253589eebc69";
+    var REGION = "na3";
 
     var form = document.getElementById('marginsSubscribe');
     var msg = document.getElementById('formMsg');
@@ -185,12 +187,10 @@
         msg.textContent = "Please enter your email and tick the consent box.";
         return;
       }
-      if(PORTAL_ID.indexOf("REPLACE") === 0){
-        window.location.href = "mailto:info@shifringroup.com?subject=Subscribe%20to%20Margins&body=Please%20add%20me%20to%20the%20Margins%20list.";
-        return;
-      }
       var fields = [{name:"email", value:email}];
       if(first){ fields.push({name:"firstname", value:first}); }
+      var last = form.lastname.value.trim();
+      if(last){ fields.push({name:"lastname", value:last}); }
       var payload = {
         fields: fields,
         context: { pageUri: window.location.href, pageName: document.title },
@@ -201,10 +201,16 @@
       };
       var btn = form.querySelector('button');
       btn.disabled = true; btn.textContent = "Subscribing";
-      fetch("https://api.hsforms.com/submissions/v3/integration/submit/" + PORTAL_ID + "/" + FORM_GUID, {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(payload)
+      function submitTo(host){
+        return fetch("https://" + host + "/submissions/v3/integration/submit/" + PORTAL_ID + "/" + FORM_GUID, {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(payload)
+        });
+      }
+      submitTo("api-" + REGION + ".hsforms.com").then(function(r){
+        if(!r.ok){ return submitTo("api.hsforms.com"); }
+        return r;
       }).then(function(r){
         if(r.ok){
           form.querySelector('.fields').style.display = "none";
